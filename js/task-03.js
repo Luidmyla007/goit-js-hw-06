@@ -12,3 +12,22 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const myList = document.querySelector(".gallery");
+console.log(myList);
+let item;
+const markup = images
+  .map((image) => `<li class = "my-item">${image}</li>`);
+  
+  
+ myList.insertAdjacentHTML("beforeend", markup);   
+
+
+
+// for (const ingredient of ingredients){
+//   const myItems = document.createElement("li");
+//   myItems.textContent = ingredient;
+//   myItems.classList.add("item");
+//   const myList = document.querySelector("#ingredients");
+//   myList.prepend(myItems);  
+// }
+ 
