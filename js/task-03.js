@@ -16,8 +16,8 @@ const myList = document.querySelector(".gallery");
 console.log(myList);
 let item;
 const markup = images
-  .map((image) => `<li class = "my-item">${image}</li>`);
-  
+  .map((image) => `<li class = "my-item">${image}</li>`)
+  .join("")
   
  myList.insertAdjacentHTML("beforeend", markup);   
 
