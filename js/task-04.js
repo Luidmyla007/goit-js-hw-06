@@ -11,7 +11,3 @@ btnIncr.addEventListener("click", () => {
     console.log(counterValue += 1);
 });
 
-
-
-
-
