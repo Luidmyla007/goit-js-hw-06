@@ -12,22 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
 const myList = document.querySelector(".gallery");
-console.log(myList);
+
 let item;
 const markup = images
-  .map((image) => `<li class = "my-item">${image}</li>`)
-  .join("")
-  
- myList.insertAdjacentHTML("beforeend", markup);   
+  .map(({ url, alt }) => `<li class = "my-item">
+  <img src="${url}" alt="${alt}" width = 300px height = 200px></li>`)
+  .join("");
 
+myList.insertAdjacentHTML("beforeend", markup); 
+myList.style.listStyle = "none";
+myList.style.display = "flex";
+myList.style.gap = "10px";
 
-
-// for (const ingredient of ingredients){
-//   const myItems = document.createElement("li");
-//   myItems.textContent = ingredient;
-//   myItems.classList.add("item");
-//   const myList = document.querySelector("#ingredients");
-//   myList.prepend(myItems);  
-// }
  
